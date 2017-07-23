@@ -1,0 +1,43 @@
+{
+    "manifest_version": 1,
+    "name": "Quickr",
+    "description": "Very simple indicator of benefits/losses in your current cryptocurrencies portfolio.",
+    "version": "0.0.1",
+    "author": "Davy Peter Braun <hello@davybraun.com>",
+    "web_accessible_resources": [
+        "assets/*.png"
+    ],
+    "icons": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "browser_action": {
+        "default_title": "Quickr",
+        "default_icon": "assets/icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "eventPage.js"
+        ],
+        "persistent": true
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+Z",
+                "mac": "Command+Shift+Z",
+                "chromeos": "Ctrl+Shift+Z",
+                "linux": "Ctrl+Shift+Z"
+            }
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "background",
+        "tabs",
+        "idle"
+    ]
+}
